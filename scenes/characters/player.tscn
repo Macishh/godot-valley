@@ -1470,7 +1470,6 @@ transitions = ["Axe", "Hoe", SubResource("AnimationNodeStateMachineTransition_n7
 graph_offset = Vector2(-195, -114)
 
 [sub_resource type="AnimationNodeBlendTree" id="AnimationNodeBlendTree_inhyd"]
-graph_offset = Vector2(-249.24231, 56.14499)
 nodes/output/position = Vector2(940, 0)
 nodes/ToolOneShot/node = SubResource("AnimationNodeOneShot_yewv4")
 nodes/ToolOneShot/position = Vector2(660, -20)
@@ -1520,3 +1519,6 @@ parameters/ToolStateMachine/Water/blend_position = Vector2(0, 0)
 
 [node name="Camera2D" type="Camera2D" parent="."]
 zoom = Vector2(4, 4)
+
+[connection signal="animation_finished" from="Animation/AnimationTree" to="." method="_on_animation_tree_animation_finished"]
+[connection signal="animation_started" from="Animation/AnimationTree" to="." method="_on_animation_tree_animation_started"]
